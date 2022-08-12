@@ -1,4 +1,6 @@
 
+using Serilog;
+
 namespace EDI.Services
 {
     public class Program
@@ -13,6 +15,13 @@ namespace EDI.Services
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                }).ConfigureLogging(logger =>
+                {
+                    logger.ClearProviders();
+                    logger.SetMinimumLevel(LogLevel.Warning);
+                }).UseSerilog((HostBuilderContext context, LoggerConfiguration loggerConfiguration) =>
+                {
+                    loggerConfiguration.ReadFrom.Configuration(context.Configuration);
                 });
     }
 }

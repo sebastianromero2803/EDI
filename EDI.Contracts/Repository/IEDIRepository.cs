@@ -3,7 +3,7 @@ using EDI.Entities.Entities;
 
 namespace EDI.Contracts.Repository
 {
-    public interface IEDIRepository : IGenericActionDbAdd<X12_315>, IGenericActionDbUpdate<X12_315>, IGenericActionDbQuery<X12_315>
+    public interface IEDIRepository : IGenericActionDbAdd<Item>, IGenericActionDbUpdate<Item>, IGenericActionDbQuery<Item>
     {
     }
 }

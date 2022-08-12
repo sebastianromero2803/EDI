@@ -1,5 +1,4 @@
-﻿
-using indice.Edi.Serialization;
+﻿using indice.Edi.Serialization;
 
 namespace EDI.Entities.Entities
 {
@@ -63,136 +62,137 @@ namespace EDI.Entities.Entities
             public string TrailerTransactionSetControlNumber { get; set; }
             #endregion
 
-            [EdiValue("X(2)", Path = "BEG/0", Description = "BEG01 - Trans. Set Purpose Code")]
-            public string TransSetPurposeCode { get; set; }
+            [EdiValue("X(2)", Path = "B4/0", Description = "B401 - Special Handling Code")]
+            public string SpecialHandlingCode { get; set; }
 
-            [EdiValue("X(2)", Path = "BEG/1", Description = "BEG02 - Purchase Order Type Code")]
-            public string PurchaseOrderTypeCode { get; set; }
+            [EdiValue("X(2)", Path = "B4/1", Description = "B402 - Inquiry Request Number")]
+            public string InquiryRequestNumber { get; set; }
 
-            [EdiValue(Path = "BEG/2", Description = "BEG03 - Purchase Order Number")]
-            public string PurchaseOrderNumber { get; set; }
+            [EdiValue(Path = "B4/2", Description = "B403 - Shipment Status Code")]
+            public string ShipmentStatusCode { get; set; }
 
-            [EdiValue("9(8)", Path = "BEG/4", Format = "yyyyMMdd", Description = "BEG05 - Purchase Order Date")]
-            public string PurchaseOrderDate { get; set; }
-
-            [EdiValue(Path = "CUR/0", Description = "CUR01 - Entity Identifier Code")]
-            public string EntityIdentifierCode { get; set; }
-
-            [EdiValue("X(3)", Path = "CUR/1", Description = "CUR02 - Currency Code")]
-            public string CurrencyCode { get; set; }
-
-            [EdiValue(Path = "REF/0", Description = "REF01 - Reference Identification Qualifier IA – Vendor Number assigned by Carhartt")]
-            public string ReferenceIdentificationQualifier { get; set; }
-
-            [EdiValue(Path = "REF/1", Description = "REF02 - Reference Identification")]
-            public string ReferenceIdentification { get; set; }
-
-            [EdiValue(Path = "FOB/4", Description = "FOB05 - Transportation Terms code")]
-            public string TransportationTermscode { get; set; }
-
-            [EdiValue(Path = "FOB/5", Description = "FOB06 - Code identifying type of location KL – Port of loading")]
-            public string LocationQualifier { get; set; }
-
-            [EdiValue("X(2)", Path = "ITD/0", Description = "ITD01 - Terms Type Code")]
-            public string TermsTypeCode { get; set; }
-
-            [EdiValue(Path = "ITD/1", Description = "ITD02 - Terms Basis Date Code")]
-            public string TermsBasisDateCode { get; set; }
-
-            [EdiValue(Path = "ITD/6", Description = "ITD07 - Terms Net Days")]
-            public string TermsNetDays { get; set; }
-
-            [EdiValue(Path = "TD5/3", Description = "TD504 - Transportation Method/Type Code")]
-            public string TransportationMethod { get; set; }
-
+            [EdiValue("9(8)", Path = "B4/3", Format = "yyyyMMdd", Description = "B404 - Date")]
+            [EdiValue("9(4)", Path = "B4/4", Format = "HHmm", Description = "B405 - Time")]
+            public DateTime Date { get; set; }
+            [EdiValue(Path = "B4/5", Description = "B406 - Status Location ")]
+            public string StatusLocation  { get; set; }
+            [EdiValue(Path = "B4/6", Description = "B407 - Equipment Initial - Prefix or alphabetic part of an equipment unit's identifying number")]
+            public string EquipmentInitial { get; set; }
+            [EdiValue(Path = "B4/7", Description = "B408 - Equipment Number - Sequencing or serial part of an equipment unit's identifying number")]
+            public string EquipmentNumber { get; set; }
+            [EdiValue(Path = "B4/8", Description = "B409 - Equipment Status Code")]
+            public string EquipmentStatusCode { get; set; }
+            [EdiValue(Path = "B4/9", Description = "B410 - Equipment Type")]
+            public string EquipmentType { get; set; }
             [EdiValue(Path = "MSG/0", Description = "MSG01 - Message Text")]
             public string OrderHeaderMessageText { get; set; }
+            public List<ReferenceId> ReferenceIds { get; set; }
+            public List<StatusDetails> StatusDetails { get; set; }
+            public List<PortOrTerminal> PortsOrTerminal { get; set; }
 
-            public List<Address> Addresses { get; set; }
-
-            public List<OrderDetail> Items { get; set; }
-
-            [EdiValue(Path = "AMT/1", Description = "AMT02 - Total amount of the Purchase Order")]
-            public string TotalTransactionAmount { get; set; }
-
+            [EdiValue(Path = "B4/10", Description = "B411 - Location Identifier")]
+            public string LocationIdentifier { get; set; }
+            [EdiValue(Path = "B4/11", Description = "B412 - Location Qualifier")]
+            public string LocationQualifier { get; set; }
+            [EdiValue(Path = "B4/12", Description = "B413 - Equipment Number Check Digit")]
+            public string EquipmentNumberCheckDigit { get; set; }
         }
 
-        [EdiSegment, EdiSegmentGroup("PO1", SequenceEnd = "CTT")]
-        public class OrderDetail
+        [EdiSegment, EdiSegmentGroup("N9", SequenceEnd = "R4")]
+        public class ReferenceId
         {
-            [EdiValue(Path = "PO1/0", Description = "PO101 - Order Line Number")]
-            public string OrderLineNumber { get; set; }
-
-            [EdiValue(Path = "PO1/1", Description = "PO102 - Quantity Ordered")]
-            public decimal QuantityOrdered { get; set; }
-
-            [EdiValue(Path = "PO1/2", Description = "PO103 - Unit Of Measurement")]
-            public string UnitOfMeasurement { get; set; }
-
-            [EdiValue(Path = "PO1/3", Description = "PO104 - Unit Price")]
-            public decimal UnitPrice { get; set; }
-
-            [EdiValue(Path = "PO1/8", Description = "PO109 - Buyer’s Part #.")]
-            public string BuyersPartno { get; set; }
-
-            [EdiValue(Path = "PO1/10", Description = "PO111 - Vendor’s Part #.")]
-            public string VendorsPartno { get; set; }
-
-            [EdiValue(Path = "PID/4", Description = "PID05 - Product Description")]
-            public string ProductDescription { get; set; }
-
-            [EdiValue(Path = "MEA/2", Description = "MEA03 - Measurement Value")]
-            public decimal MeasurementValue { get; set; }
-
-            [EdiCondition("018", Path = "DTM/0/0")]
-            public DTM AvailableFromDate { get; set; }
-
-            [EdiCondition("067", Path = "DTM/0/0")]
-            public DTM ArrivalDate { get; set; }
-
-            [EdiCondition("002", Path = "DTM/0/0")]
-            public DTM DeliveryRequestedDate { get; set; }
-
-            [EdiCondition("038", Path = "DTM/0/0")]
-            public DTM ShipNoLaterDate { get; set; }
-
-            [EdiValue(Path = "TC2/0", Description = "TC201 - Measurement Value")]
-            public string TC201 { get; set; }
-
-            public List<MSG> MSG { get; set; }
-
+            [EdiValue(Path = "N9/0", Description = "N901 - Reference Identification Qualifier")]
+            public string ReferenceIdentificationQualifier { get; set; }
+            [EdiValue(Path = "N9/1", Description = "N902 - Reference Identification")]
+            public string ReferenceIdentification { get; set; }
+            [EdiValue(Path = "N9/2", Description = "N903 - Free-form Description")]
+            public string FreeFormDescription { get; set; }
+            [EdiValue("9(8)", Path = "N9/3", Format = "yyyyMMdd", Description = "N9/04 - Date")]
+            [EdiValue("9(4)", Path = "N9/4", Format = "HHmm", Description = "N9/05 - Time")]
+            public DateTime Date { get; set; }
+            [EdiValue(Path = "N9/5", Description = "N906 - Time Code")]
+            public string TimeCode { get; set; }
+            [EdiValue(Path = "N9/6", Description = "N907 - Reference Identifier")]
+            public string ReferenceIdentifier { get; set; }
         }
 
-        [EdiSegment, EdiSegmentGroup("N1", SequenceEnd = "PO1")]
-        public class Address
+        [EdiSegment, EdiSegmentGroup("Q2", SequenceEnd = "R4")]
+        public class StatusDetails
         {
-
-            [EdiValue(Path = "N1/0", Description = "N101 - Address Code")]
-            public string AddressCode { get; set; }
-
-            [EdiValue(Path = "N1/1", Description = "N102 - Address Name")]
-            public string AddressName { get; set; }
-
-            [EdiValue(Path = "N3/0", Description = "N301 - Address Information")]
-            public string AddressInformation { get; set; }
-
-            [EdiValue(Path = "N4/0", Description = "N401 - City Name")]
-            public string CityName { get; set; }
-
-            [EdiValue(Path = "N4/3", Description = "N404 - Country Code")]
+            [EdiValue(Path = "Q2/0", Description = "Q201 - Vessel Code")]
+            public string VeselCode { get; set; }
+            [EdiValue(Path = "Q2/1", Description = "Q202 - Country Code")]
             public string CountryCode { get; set; }
+            [EdiValue("9(8)", Path = "Q2/2", Format = "yyyyMMdd", Description = "Q2/03 - Date")]
+            public DateTime Date { get; set; }
+            [EdiValue("9(8)", Path = "Q2/3", Format = "yyyyMMdd", Description = "Q2/04 - Date 2")]
+            public DateTime Date2 { get; set; }
+            [EdiValue("9(8)", Path = "Q2/4", Format = "yyyyMMdd", Description = "Q2/05 - Date 3")]
+            public DateTime Date3 { get; set; }
+            [EdiValue(Path = "Q2/5", Description = "Q206 - Landing Quantity")]
+            public string LandingQuantity { get; set; }
+            [EdiValue(Path = "Q2/6", Description = "Q207 - Weight")]
+            public string Weight { get; set; }
+            [EdiValue(Path = "Q2/7", Description = "Q208 - Weight Qualifier")]
+            public string WeightQualifier { get; set; }
+            [EdiValue(Path = "Q2/8", Description = "Q209 - Voyage Number")]
+            public string VoyageNumber { get; set; }
+            [EdiValue(Path = "Q2/9", Description = "Q210 - Reference Identification Qualifier")]
+            public string ReferenceIdentificationQualifier { get; set; }
+            [EdiValue(Path = "Q2/10", Description = "Q211 - Reference Identification")]
+            public string ReferenceIdentification { get; set; }
+            [EdiValue(Path = "Q2/11", Description = "Q212 - Vessel Code Qualifier")]
+            public string VesselCodeQualifier { get; set; }
+            [EdiValue(Path = "Q2/12", Description = "Q213 - Vessel Name")]
+            public string VesselName { get; set; }
+            [EdiValue(Path = "Q2/13", Description = "Q214 - Volume")]
+            public string Volume { get; set; }
+            [EdiValue(Path = "Q2/14", Description = "Q215 - Volume Unit Qualifier")]
+            public string VolumeUnitQualifier { get; set; }
+            [EdiValue(Path = "Q2/15", Description = "Q216 - Weight Unit Code")]
+            public string WeightUnitCode { get; set; }
+            public List<MSG> MSG { get; set; }
+        }
+
+        [EdiSegment, EdiSegmentGroup("R4", SequenceEnd = "DTM")]
+        public class PortOrTerminal
+        {
+
+            [EdiValue(Path = "R4/0", Description = "R401 - Port or Terminal Function Code")]
+            public string PortOrTerminalFunctionCode { get; set; }
+
+            [EdiValue(Path = "R4/1", Description = "R402 - Location Qualifier")]
+            public string LocationQualifier { get; set; }
+
+            [EdiValue(Path = "R4/2", Description = "R403 - LocationIdentifier")]
+            public string LocationIdentifier { get; set; }
+
+            [EdiValue(Path = "R4/3", Description = "R404 - Port Name")]
+            public string PortName { get; set; }
+
+            [EdiValue(Path = "R4/4", Description = "R405 - Country Code")]
+            public string CountryCode { get; set; }
+            [EdiValue(Path = "R4/5", Description = "R406 - Terminal Name")]
+            public string TerminalName { get; set; }
+            [EdiValue(Path = "R4/6", Description = "R407 - Pier Number")]
+            public string PierNumber { get; set; }
+            [EdiValue(Path = "R4/7", Description = "R408 - State or Province Code")]
+            public string StateOrProvinceCode { get; set; }
 
         }
 
-        [EdiSegment, EdiPath("DTM")]
+        [EdiSegment, EdiSegmentGroup("DTM")]
         public class DTM
         {
 
             [EdiValue(Path = "DTM/0", Description = "DTM01 - Date/Time Qualifier")]
             public string DateTimeQualifier { get; set; }
 
-            [EdiValue("9(8)", Path = "DTM/1", Format = "yyyyMMdd", Description = "DTM02 - Date format =CCYYMMDD")]
+            [EdiValue("9(8)", Path = "DTM/1", Format = "yyyyMMdd", Description = "DTM02 - Date")]
+            [EdiValue("9(4)", Path = "DTM/2", Format = "HHmm", Description = "DTM03 - Time")]
             public DateTime Date { get; set; }
+            [EdiValue(Path = "DTM/3", Description = "DTM04 - Time Code")]
+            public string TimeCode { get; set; }
         }
 
         [EdiSegment, EdiPath("MSG")]

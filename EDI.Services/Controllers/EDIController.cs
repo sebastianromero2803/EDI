@@ -22,15 +22,15 @@ namespace EDI.Services.Controllers
         [HttpGet]
         public string Get()
         {
-            return "value";
+            var response = _ediCore.GetX12_315();
+            return response;
         }
 
         // GET api/<EDIController>/5
         [HttpGet("{id}")]
-        public string Get(string id)
+        public string Get(int id)
         {
-            var response = _ediCore.GetPurchaseOrder(id);
-            return response;
+            return "value";
         }
 
         // POST api/<EDIController>

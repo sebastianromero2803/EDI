@@ -1,3 +1,7 @@
+using EDI.Contracts.Repository;
+using EDI.DataAccess.Context;
+using EDI.Repositories.ImplementRepositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 namespace EDI.Services
@@ -26,6 +30,16 @@ namespace EDI.Services
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EDI.Services", Version = "v1" });
             });
+
+            services.AddDbContext<CosmosContext>(options =>
+                options.UseCosmos(
+                    Configuration["CosmosDb:Account"],
+                    Configuration["CosmosDb:Key"],
+                    Configuration["CosmosDb:DatabaseName"]
+                )
+            );
+
+            services.AddTransient<IEDIRepository, EDIRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

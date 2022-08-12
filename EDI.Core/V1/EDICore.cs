@@ -19,21 +19,31 @@ namespace EDI.Core.V1
             _errorHandler = new ErrorHandler<X12_315>(logger);
         }
 
-        public async string GetPurchaseOrder(string Id)
+        public string GetX12_315()
         {
-            
+            var processedEDI = ProcessEDIToJson(@"C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Entities\x12.315.edi");
+            return processedEDI;
         }
 
-        public async string PostX12_350(string EDIFile)
+        public async Task<List<Item>> GetAllContainers()
         {
-            var ediProcessed = ProcessEDIToJson(EDIFile);
-            await _ediContext.AddAsync(ediProcessed);
+            var response = await _ediContext.GetAllAsync();
+            return response;
         }
+
+        //public async string PutContainerInfo(string Id)
+        //{
+
+        //}
+
+        //public async string PostX12_350(string EDIFile)
+        //{
+        //    var ediProcessed = ProcessEDIToJson(EDIFile);
+        //    await _ediContext.AddAsync(ediProcessed);
+        //}
 
         public string ProcessEDIToJson(string inputEDIFilename) 
         {
-            string inputEDIFilename2 = @"C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\x12.850.edi";
-
             var grammar = EdiGrammar.NewX12();
             grammar.SetAdvice(
                 segmentNameDelimiter: '*',
