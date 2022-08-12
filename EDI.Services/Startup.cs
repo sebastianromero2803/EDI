@@ -82,7 +82,7 @@ namespace EDI.Services
             EDIRepository cosmosDbService = new EDIRepository(client, databaseName, containerName);
 
             //Define el objeto database que manipulara el client
-            Microsoft.Azure.Cosmos.DatabaseResponse database = await client.CreateDatabaseIfNotExistsAsync(databaseName);
+            DatabaseResponse database = await client.CreateDatabaseIfNotExistsAsync(databaseName);
             await database.Database.CreateContainerIfNotExistsAsync(containerName, "/id");
 
             // Retorna la instancia del objeto cosmosDbService

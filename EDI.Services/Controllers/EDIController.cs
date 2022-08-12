@@ -22,7 +22,7 @@ namespace EDI.Services.Controllers
         [HttpGet]
         public string Get()
         {
-            var response = _ediCore.GetX12_315();
+            var response = _ediCore.GetContainer();
             return response;
         }
 

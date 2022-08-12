@@ -176,3 +176,101 @@ System.InvalidOperationException: Unable to resolve service for type 'EDI.Contra
 2022-08-12 11:59:39.111 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 9098.727ms
 2022-08-12 11:59:39.123 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
 2022-08-12 11:59:39.125 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI/1 - - - 200 - application/json;+charset=utf-8 9237.2499ms
+2022-08-12 12:13:48.021 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-12 12:13:48.052 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-12 12:13:48.060 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-12 12:13:48.061 -05:00 [INF] Hosting environment: Development
+2022-08-12 12:13:48.063 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-12 12:13:48.784 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-12 12:13:49.406 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 632.1314ms
+2022-08-12 12:13:49.529 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-12 12:13:49.545 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 15.8807ms
+2022-08-12 12:13:49.729 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-12 12:13:49.847 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 117.5681ms
+2022-08-12 12:13:50.514 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-12 12:13:50.824 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 309.6683ms
+2022-08-12 12:13:59.335 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-12 12:13:59.403 -05:00 [INF] CORS policy execution successful.
+2022-08-12 12:13:59.418 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:13:59.438 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 12:13:59.752 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-12 12:13:59.766 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 315.2551ms
+2022-08-12 12:13:59.778 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:13:59.783 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 448.9660ms
+2022-08-12 12:18:46.966 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-12 12:18:46.971 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:18:46.980 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 12:18:47.000 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-12 12:18:47.003 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 20.1334ms
+2022-08-12 12:18:47.006 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:18:47.007 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 41.3727ms
+2022-08-12 12:18:56.995 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI/1 - -
+2022-08-12 12:18:56.998 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 12:18:57.028 -05:00 [INF] Route matched with {action = "GetAll", controller = "EDI"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EDI.Entities.Entities.Item]] GetAll() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 12:19:00.741 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EDI.Entities.Entities.Item, EDI.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-12 12:19:00.752 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 3721.0201ms
+2022-08-12 12:19:00.755 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 12:19:00.759 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI/1 - - - 200 - application/json;+charset=utf-8 3764.5981ms
+2022-08-12 12:19:14.809 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-12 12:19:14.821 -05:00 [INF] CORS policy execution successful.
+2022-08-12 12:19:14.823 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:19:14.827 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 12:19:14.844 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-12 12:19:14.850 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 19.2565ms
+2022-08-12 12:19:14.851 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:19:14.853 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 44.1749ms
+2022-08-12 12:20:51.089 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI application/json 17
+2022-08-12 12:20:51.093 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:20:51.095 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 12:20:51.116 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-12 12:20:51.140 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 41.4936ms
+2022-08-12 12:20:51.142 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 12:20:51.145 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI application/json 17 - 200 - text/plain;+charset=utf-8 56.1817ms
+2022-08-12 12:21:19.637 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI/1 - -
+2022-08-12 12:21:19.639 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 12:21:19.640 -05:00 [INF] Route matched with {action = "GetAll", controller = "EDI"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EDI.Entities.Entities.Item]] GetAll() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 12:21:20.921 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EDI.Entities.Entities.Item, EDI.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-12 12:21:20.926 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 1283.5393ms
+2022-08-12 12:21:20.929 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 12:21:20.932 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI/1 - - - 200 - application/json;+charset=utf-8 1294.4864ms
+2022-08-12 13:36:28.810 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-12 13:36:28.875 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-12 13:36:28.888 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-12 13:36:28.889 -05:00 [INF] Hosting environment: Development
+2022-08-12 13:36:28.890 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-12 13:36:29.507 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-12 13:36:30.186 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 692.5877ms
+2022-08-12 13:36:30.373 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-12 13:36:30.391 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 18.7866ms
+2022-08-12 13:36:30.656 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-12 13:36:30.766 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 109.3928ms
+2022-08-12 13:36:31.100 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-12 13:36:31.417 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 316.6812ms
+2022-08-12 13:36:44.842 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-12 13:36:44.974 -05:00 [INF] CORS policy execution successful.
+2022-08-12 13:36:45.008 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 13:36:45.026 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 13:36:45.387 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-12 13:36:45.405 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 365.7465ms
+2022-08-12 13:36:45.417 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 13:36:45.419 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 587.2643ms
+2022-08-12 13:36:56.063 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI/1 - -
+2022-08-12 13:36:56.068 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 13:36:56.090 -05:00 [INF] Route matched with {action = "GetAll", controller = "EDI"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EDI.Entities.Entities.Item]] GetAll() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 13:36:59.123 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EDI.Entities.Entities.Item, EDI.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-12 13:36:59.138 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 3043.344ms
+2022-08-12 13:36:59.143 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 13:36:59.148 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI/1 - - - 200 - application/json;+charset=utf-8 3084.5566ms
+2022-08-12 13:39:49.210 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-12 13:39:49.246 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-12 13:39:49.250 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-12 13:39:49.252 -05:00 [INF] Hosting environment: Development
+2022-08-12 13:39:49.254 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-12 13:39:49.787 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-12 13:39:50.210 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 432.7255ms
+2022-08-12 13:39:50.281 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-12 13:39:50.298 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 16.1306ms
+2022-08-12 13:39:50.504 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-12 13:39:50.576 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.4248ms
+2022-08-12 13:39:50.935 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-12 13:39:51.326 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 392.2170ms

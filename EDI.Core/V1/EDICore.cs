@@ -19,7 +19,7 @@ namespace EDI.Core.V1
             _errorHandler = new ErrorHandler<X12_315>(logger);
         }
 
-        public string GetX12_315()
+        public string GetContainer()
         {
             var processedEDI = ProcessEDIToJson(@"C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Entities\x12.315.edi");
             return processedEDI;
