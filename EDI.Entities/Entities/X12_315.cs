@@ -152,6 +152,7 @@ namespace EDI.Entities.Entities
             [EdiValue(Path = "Q2/15", Description = "Q216 - Weight Unit Code")]
             public string WeightUnitCode { get; set; }
             public List<MSG> MSG { get; set; }
+            public List<DTM> DTM { get; set; }
         }
 
         [EdiSegment, EdiSegmentGroup("R4", SequenceEnd = "DTM")]

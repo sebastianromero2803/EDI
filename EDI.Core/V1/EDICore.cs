@@ -25,9 +25,9 @@ namespace EDI.Core.V1
             return processedEDI;
         }
 
-        public async Task<List<Item>> GetAllContainers()
+        public async Task<List<Item>> GetAllContainers(string queryString)
         {
-            var response = await _ediContext.GetAllAsync();
+            var response = await _ediContext.GetByFilterAsync(queryString);
             return response;
         }
 
@@ -36,7 +36,7 @@ namespace EDI.Core.V1
 
         //}
 
-        //public async string PostX12_350(string EDIFile)
+        //public async Task<Tuple<Item, bool>> PostContainer(string EDIFile)
         //{
         //    var ediProcessed = ProcessEDIToJson(EDIFile);
         //    await _ediContext.AddAsync(ediProcessed);

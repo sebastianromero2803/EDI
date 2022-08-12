@@ -28,9 +28,10 @@ namespace EDI.Services.Controllers
 
         // GET api/<EDIController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        [ActionName("GetAll")]
+        public async Task<List<Item>> GetAll()
         {
-            return "value";
+            return await _ediCore.GetAllContainers("SELECT * FROM c");
         }
 
         // POST api/<EDIController>

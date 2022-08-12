@@ -6,7 +6,6 @@ namespace EDI.DataAccess.Context
 {
     public class CosmosContext : DbContext
     {
-        public DbSet<Item> X12_315 { get; set; }
 
         public CosmosContext(DbContextOptions<CosmosContext> options) : base(options) { }
 

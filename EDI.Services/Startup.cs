@@ -1,6 +1,7 @@
 using EDI.Contracts.Repository;
 using EDI.DataAccess.Context;
 using EDI.Repositories.ImplementRepositories;
+using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -39,7 +40,7 @@ namespace EDI.Services
                 )
             );
 
-            services.AddTransient<IEDIRepository, EDIRepository>();
+            services.AddSingleton<IEDIRepository>(InitializeCosmosClientInstanceAsync(Configuration.GetSection("CosmosDb")).GetAwaiter().GetResult());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +65,28 @@ namespace EDI.Services
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private static async Task<EDIRepository> InitializeCosmosClientInstanceAsync(IConfigurationSection configurationSection)
+        {
+            //Busca valores deen appsetting
+            string databaseName = configurationSection.GetSection("DatabaseName").Value;
+            string containerName = configurationSection.GetSection("ContainerName").Value;
+            string account = configurationSection.GetSection("Account").Value;
+            string key = configurationSection.GetSection("Key").Value;
+
+            //Instancia el controlador de cosmosDB 
+            CosmosClient client = new CosmosClient(account, key);
+
+            //Crea la instancia del objeto CosmosDbService 
+            EDIRepository cosmosDbService = new EDIRepository(client, databaseName, containerName);
+
+            //Define el objeto database que manipulara el client
+            Microsoft.Azure.Cosmos.DatabaseResponse database = await client.CreateDatabaseIfNotExistsAsync(databaseName);
+            await database.Database.CreateContainerIfNotExistsAsync(containerName, "/id");
+
+            // Retorna la instancia del objeto cosmosDbService
+            return cosmosDbService;
         }
     }
 }
