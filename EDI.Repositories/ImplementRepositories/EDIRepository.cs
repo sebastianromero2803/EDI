@@ -13,12 +13,12 @@ namespace EDI.Repositories.ImplementRepositories
             _context = dbClient.GetContainer(databaseName, containerName);
         }
 
-        public async Task<Tuple<Item, bool>> AddAsync(Item entity)
+        public async Task<Tuple<ItemContainer, bool>> AddAsync(ItemContainer entity)
         {
             try
             {
-                var result = await _context.CreateItemAsync(entity, new PartitionKey(entity.Id));
-                return Tuple.Create(new Item(), true);
+                var result = await _context.CreateItemAsync(entity, new PartitionKey(entity.ContainerId));
+                return Tuple.Create(new ItemContainer(), true);
             }
             catch (CosmosException)
             {
@@ -27,25 +27,12 @@ namespace EDI.Repositories.ImplementRepositories
             
         }
 
-        public async Task<List<Item>> GetAllAsync()
+        public async Task<List<ItemContainer>> GetAllAsync()
         {
             try
             {
-                var result = _context.GetItemLinqQueryable<Item>().GetEnumerator();
-                return result as List<Item>;
-            }
-            catch (CosmosException)
-            {
-                throw;
-            }
-        }
-
-        public async Task<List<Item>> GetByFilterAsync(string queryString)
-        {
-            try
-            {
-                var query = _context.GetItemQueryIterator<Item>(new QueryDefinition(queryString));
-                List<Item> results = new List<Item>();
+                var query = _context.GetItemQueryIterator<ItemContainer>(new QueryDefinition("SELECT * FROM c"));
+                List<ItemContainer> results = new List<ItemContainer>();
                 while (query.HasMoreResults)
                 {
                     var response = await query.ReadNextAsync();
@@ -59,11 +46,30 @@ namespace EDI.Repositories.ImplementRepositories
             }
         }
 
-        public async Task<Item> GetByIdAsync(string id)
+        public async Task<List<ItemContainer>> GetByFilterAsync(string queryString)
         {
             try
             {
-                ItemResponse<Item> response = await _context.ReadItemAsync<Item>(id, new PartitionKey(id));
+                var query = _context.GetItemQueryIterator<ItemContainer>(new QueryDefinition(queryString));
+                List<ItemContainer> results = new List<ItemContainer>();
+                while (query.HasMoreResults)
+                {
+                    var response = await query.ReadNextAsync();
+                    results.AddRange(response.ToList());
+                }
+                return results;
+            }
+            catch (CosmosException)
+            {
+                throw;
+            }
+        }
+
+        public async Task<ItemContainer> GetByIdAsync(string id)
+        {
+            try
+            {
+                ItemResponse<ItemContainer> response = await _context.ReadItemAsync<ItemContainer>(id, new PartitionKey(id));
                 return response.Resource;
             }
             catch (CosmosException)
@@ -72,11 +78,11 @@ namespace EDI.Repositories.ImplementRepositories
             }
         }
 
-        public async Task<bool> UpdateAsync(string id, Item item)
+        public async Task<bool> UpdateAsync(string id, ItemContainer item)
         {
             try
             {
-                ItemResponse<Item> response = await _context.UpsertItemAsync<Item>(item, new PartitionKey(id)); ;
+                ItemResponse<ItemContainer> response = await _context.UpsertItemAsync(item, new PartitionKey(id)); ;
                 return true;
             }
             catch (CosmosException)

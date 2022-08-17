@@ -1,6 +1,8 @@
 ﻿using EDI.Contracts.Repository;
 using EDI.Core.V1;
 using EDI.Entities.Entities;
+using EDI.Entities.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,6 +11,7 @@ namespace EDI.Services.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EDIController : ControllerBase
     {
         private readonly EDICore _ediCore;
@@ -20,35 +23,33 @@ namespace EDI.Services.Controllers
 
         // GET: api/<EDIController>
         [HttpGet]
-        public string Get()
+        [ActionName("GetAll")]
+        public async Task<ActionResult<List<ItemContainer>>> Get()
         {
-            var response = _ediCore.GetContainer();
-            return response;
+            var response = await _ediCore.GetAllContainers();
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // GET api/<EDIController>/5
         [HttpGet("{id}")]
-        [ActionName("GetAll")]
-        public async Task<List<Item>> GetAll()
+        [ActionName("GetContainer")]
+        public async Task<ActionResult<List<ItemContainer>>> GetAll(string id)
         {
-            return await _ediCore.GetAllContainers("SELECT * FROM c");
+            var response = await _ediCore.GetContainerById(id);
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // POST api/<EDIController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<Task<ResponseService<Tuple<string, bool>>>>> Post([FromBody] string edi)
         {
+            var response = await _ediCore.PostContainers(edi);
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // PUT api/<EDIController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<EDIController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
         {
         }
     }

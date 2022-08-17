@@ -12,17 +12,17 @@ namespace EDI.DataAccess.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseCosmos(
-                "https://mytutorialapp.documents.azure.com:443/",
-                "hm1l0k5AMlg6gn09SDQN9hmLtYkziLIQZwiR59Um559dGAnvjsRl1WhWIywJwU6iujkVMRsZUDIyh3PS1ZcWuQ==",
-                "Tasks"
+                "https://advent-final.documents.azure.com:443/",
+                "lLsQ9bUFgvY6bb015YWKDHTLYYxsZZkw0PKDrYOeEAnFJ7Fp1mYl3NUrssQZayRkHx9YxRbEysDrkp1PRzVYxw==",
+                "advent-final"
             );
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Item>()
-                .ToContainer("X12_315")
-                .HasOne(item => item.Id);
+            modelBuilder.Entity<ItemContainer>()
+                .ToContainer("Containers")
+                .HasOne(item => item.ContainerId);
         }
     }
 }

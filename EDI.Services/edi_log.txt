@@ -274,3 +274,388 @@ System.InvalidOperationException: Unable to resolve service for type 'EDI.Contra
 2022-08-12 13:39:50.576 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.4248ms
 2022-08-12 13:39:50.935 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
 2022-08-12 13:39:51.326 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 392.2170ms
+2022-08-12 15:07:15.674 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-12 15:07:15.751 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-12 15:07:15.760 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-12 15:07:15.762 -05:00 [INF] Hosting environment: Development
+2022-08-12 15:07:15.763 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-12 15:07:16.890 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-12 15:07:18.004 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 1124.1316ms
+2022-08-12 15:07:18.738 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-12 15:07:18.770 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 31.7951ms
+2022-08-12 15:07:18.837 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-12 15:07:18.899 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.9151ms
+2022-08-12 15:07:20.029 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-12 15:07:20.680 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 650.7098ms
+2022-08-12 15:07:27.244 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-12 15:07:27.333 -05:00 [INF] CORS policy execution successful.
+2022-08-12 15:07:27.353 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 15:07:27.380 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 15:07:27.815 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-12 15:07:27.836 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 436.807ms
+2022-08-12 15:07:27.862 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-12 15:07:27.875 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 630.9573ms
+2022-08-12 15:08:07.745 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI/1 - -
+2022-08-12 15:08:07.747 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 15:08:07.775 -05:00 [INF] Route matched with {action = "GetAll", controller = "EDI"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EDI.Entities.Entities.Item]] GetAll() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-12 15:08:12.167 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EDI.Entities.Entities.Item, EDI.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-12 15:08:12.184 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 4405.9316ms
+2022-08-12 15:08:12.189 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-12 15:08:12.193 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI/1 - - - 200 - application/json;+charset=utf-8 4447.7530ms
+2022-08-15 19:14:21.952 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-15 19:14:22.393 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-15 19:14:22.393 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-15 19:14:22.396 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-15 19:14:22.397 -05:00 [INF] Hosting environment: Development
+2022-08-15 19:14:22.397 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-15 19:14:23.213 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-15 19:14:23.550 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 342.5674ms
+2022-08-15 19:14:23.638 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-15 19:14:23.651 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 13.7657ms
+2022-08-15 19:14:23.759 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-15 19:14:23.834 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 74.4071ms
+2022-08-15 19:14:24.061 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-15 19:14:24.250 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.6081ms
+2022-08-15 19:14:52.556 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:7028/api/EDI application/json 52
+2022-08-15 19:14:52.716 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Post (EDI.Services)'
+2022-08-15 19:14:52.734 -05:00 [INF] Route matched with {action = "Post", controller = "EDI"}. Executing controller action with signature Void Post(System.String) on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-15 19:14:52.741 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Post (EDI.Services) in 1.5639ms
+2022-08-15 19:14:52.746 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Post (EDI.Services)'
+2022-08-15 19:14:52.749 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'EDI.Contracts.Repository.IEDIRepository' while attempting to activate 'EDI.Services.Controllers.EDIController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method4(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-08-15 19:14:52.815 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:7028/api/EDI application/json 52 - 500 - text/plain;+charset=utf-8 258.9963ms
+2022-08-15 22:13:33.794 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-15 22:13:34.411 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-15 22:13:34.414 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-15 22:13:34.418 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-15 22:13:34.423 -05:00 [INF] Hosting environment: Development
+2022-08-15 22:13:34.425 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-15 22:13:35.217 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger - -
+2022-08-15 22:13:35.298 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger - - - 301 0 - 85.2619ms
+2022-08-15 22:13:35.319 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-15 22:13:35.496 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 177.2531ms
+2022-08-15 22:13:35.545 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/swagger-ui.css - -
+2022-08-15 22:13:35.553 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/swagger-ui-standalone-preset.js - -
+2022-08-15 22:13:35.553 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-15 22:13:35.553 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/swagger-ui-bundle.js - -
+2022-08-15 22:13:35.561 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.3981ms
+2022-08-15 22:13:35.595 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-08-15 22:13:35.595 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-08-15 22:13:35.596 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/swagger-ui.css - - - 200 143943 text/css 50.6285ms
+2022-08-15 22:13:35.597 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 43.4878ms
+2022-08-15 22:13:35.597 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-08-15 22:13:35.598 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/swagger-ui-bundle.js - - - 200 1096145 application/javascript 44.6831ms
+2022-08-15 22:13:35.759 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-15 22:13:35.781 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.2216ms
+2022-08-15 22:13:35.902 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/favicon-32x32.png - -
+2022-08-15 22:13:35.905 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-08-15 22:13:35.908 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/favicon-32x32.png - - - 200 628 image/png 5.7221ms
+2022-08-15 22:13:36.106 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-15 22:13:36.262 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.8966ms
+2022-08-15 22:13:53.276 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-15 22:13:53.410 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-15 22:13:53.418 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-15 22:13:53.422 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 401 0 - 145.2237ms
+2022-08-15 22:16:18.301 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52
+2022-08-15 22:16:18.472 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-15 22:16:18.482 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-15 22:16:18.617 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-15 22:16:18.637 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 146.5666ms
+2022-08-15 22:16:18.649 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-15 22:16:18.650 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52 - 200 - text/plain;+charset=utf-8 348.8261ms
+2022-08-15 22:16:38.338 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI/1 application/json 52
+2022-08-15 22:16:38.347 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-15 22:16:38.356 -05:00 [INF] Route matched with {action = "GetAll", controller = "EDI"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EDI.Entities.Entities.Item]] GetAll() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-15 22:16:43.186 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EDI.Entities.Entities.Item, EDI.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-15 22:16:43.191 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 4833.1537ms
+2022-08-15 22:16:43.195 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-15 22:16:43.201 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI/1 application/json 52 - 200 - application/json;+charset=utf-8 4862.7259ms
+2022-08-15 22:16:52.110 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI/1 application/json 52
+2022-08-15 22:16:52.122 -05:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX12723: Unable to decode the payload 'System.String' as Base64Url encoded string. jwtEncodedString: ''.
+ ---> Microsoft.IdentityModel.Json.JsonReaderException: Bad JSON escape sequence: \˞. Path 'email', line 1, position 108.
+   at Microsoft.IdentityModel.Json.JsonTextReader.ReadStringIntoBuffer(Char quote)
+   at Microsoft.IdentityModel.Json.JsonTextReader.ParseProperty()
+   at Microsoft.IdentityModel.Json.JsonTextReader.ParseObject()
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary(IDictionary dictionary, JsonReader reader, JsonDictionaryContract contract, JsonProperty containerProperty, String id)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Microsoft.IdentityModel.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Microsoft.IdentityModel.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at System.IdentityModel.Tokens.Jwt.JsonExtensions.DeserializeJwtPayload(String jsonString)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken.DecodeJws(String[] tokenParts)
+   --- End of inner exception stack trace ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken.DecodeJws(String[] tokenParts)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Decode(String[] tokenParts, String rawData)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadJwtToken(String token)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-15 22:16:52.148 -05:00 [INF] Bearer was not authenticated. Failure message: IDX12723: Unable to decode the payload 'System.String' as Base64Url encoded string. jwtEncodedString: ''.
+2022-08-15 22:16:52.149 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-15 22:16:52.151 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-15 22:16:52.152 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI/1 application/json 52 - 401 0 - 42.1370ms
+2022-08-15 22:16:57.149 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI/1 application/json 52
+2022-08-15 22:16:57.151 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-15 22:16:57.152 -05:00 [INF] Route matched with {action = "GetAll", controller = "EDI"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EDI.Entities.Entities.Item]] GetAll() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-15 22:16:57.333 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EDI.Entities.Entities.Item, EDI.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-15 22:16:57.340 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.GetAll (EDI.Services) in 186.2444ms
+2022-08-15 22:16:57.344 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.GetAll (EDI.Services)'
+2022-08-15 22:16:57.345 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI/1 application/json 52 - 200 - application/json;+charset=utf-8 195.8230ms
+2022-08-16 19:17:29.558 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 19:17:30.089 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 19:17:30.096 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 19:17:30.101 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 19:17:30.102 -05:00 [INF] Hosting environment: Development
+2022-08-16 19:17:30.103 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 19:17:31.189 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 19:17:31.810 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 629.0235ms
+2022-08-16 19:17:31.916 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 19:17:31.925 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 8.5417ms
+2022-08-16 19:17:32.364 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 19:17:32.524 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 160.1638ms
+2022-08-16 19:17:33.185 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 19:17:33.483 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 298.8896ms
+2022-08-16 19:17:43.369 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/api/EDI - -
+2022-08-16 19:17:43.564 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-16 19:17:43.574 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-16 19:17:43.578 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/api/EDI - - - 401 0 - 208.5808ms
+2022-08-16 19:18:44.257 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52
+2022-08-16 19:18:44.510 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 19:18:44.523 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 19:18:44.728 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 19:18:44.751 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 218.5976ms
+2022-08-16 19:18:44.758 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 19:18:44.761 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52 - 200 - text/plain;+charset=utf-8 503.2266ms
+2022-08-16 19:18:53.130 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52
+2022-08-16 19:18:53.134 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 19:18:53.134 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 19:18:53.140 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 19:18:53.141 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 5.4409ms
+2022-08-16 19:18:53.142 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 19:18:53.143 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52 - 200 - text/plain;+charset=utf-8 13.2385ms
+2022-08-16 19:18:56.788 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52
+2022-08-16 19:18:56.815 -05:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX12723: Unable to decode the payload 'System.String' as Base64Url encoded string. jwtEncodedString: ''.
+ ---> Microsoft.IdentityModel.Json.JsonReaderException: Bad JSON escape sequence: \�. Path '['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier']', line 1, position 175.
+   at Microsoft.IdentityModel.Json.JsonTextReader.ReadStringIntoBuffer(Char quote)
+   at Microsoft.IdentityModel.Json.JsonTextReader.ParseValue()
+   at Microsoft.IdentityModel.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary(IDictionary dictionary, JsonReader reader, JsonDictionaryContract contract, JsonProperty containerProperty, String id)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Microsoft.IdentityModel.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Microsoft.IdentityModel.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Microsoft.IdentityModel.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at System.IdentityModel.Tokens.Jwt.JsonExtensions.DeserializeJwtPayload(String jsonString)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken.DecodeJws(String[] tokenParts)
+   --- End of inner exception stack trace ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken.DecodeJws(String[] tokenParts)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Decode(String[] tokenParts, String rawData)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadJwtToken(String token)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-08-16 19:18:56.900 -05:00 [INF] Bearer was not authenticated. Failure message: IDX12723: Unable to decode the payload 'System.String' as Base64Url encoded string. jwtEncodedString: ''.
+2022-08-16 19:18:56.901 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-08-16 19:18:56.904 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-08-16 19:18:56.905 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52 - 401 0 - 117.1730ms
+2022-08-16 19:19:00.615 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52
+2022-08-16 19:19:00.617 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 19:19:00.619 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 19:19:00.631 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 19:19:00.633 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 10.7683ms
+2022-08-16 19:19:00.635 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 19:19:00.635 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI application/json 52 - 200 - text/plain;+charset=utf-8 20.6301ms
+2022-08-16 22:39:22.342 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:39:22.864 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:39:22.868 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:39:22.873 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:39:22.876 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:39:22.876 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:39:23.663 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:39:23.919 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 260.1325ms
+2022-08-16 22:39:23.976 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:39:23.985 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 8.3301ms
+2022-08-16 22:39:24.118 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:39:24.149 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.2903ms
+2022-08-16 22:39:24.345 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:39:24.568 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.5442ms
+2022-08-16 22:40:03.661 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:40:03.995 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:40:04.014 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:40:04.147 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:40:04.171 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 150.6679ms
+2022-08-16 22:40:04.177 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:40:04.178 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 517.5083ms
+2022-08-16 22:43:38.924 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:43:39.282 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:43:39.282 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:43:39.285 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:43:39.286 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:43:39.286 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:43:39.716 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:43:39.946 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 233.7254ms
+2022-08-16 22:43:40.000 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:43:40.009 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 8.8964ms
+2022-08-16 22:43:40.184 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:43:40.213 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.1976ms
+2022-08-16 22:43:40.412 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:43:40.631 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.9355ms
+2022-08-16 22:43:46.510 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:43:46.782 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:43:46.796 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:43:46.933 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:43:46.947 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 138.4036ms
+2022-08-16 22:43:46.956 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:43:46.959 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 448.8520ms
+2022-08-16 22:45:36.288 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:45:36.590 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:45:36.591 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:45:36.595 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:45:36.599 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:45:36.602 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:45:37.188 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:45:37.405 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 219.7053ms
+2022-08-16 22:45:37.447 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:45:37.454 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.8141ms
+2022-08-16 22:45:37.568 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:45:37.599 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.8748ms
+2022-08-16 22:45:37.766 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:45:37.952 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.9179ms
+2022-08-16 22:45:41.405 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:45:41.637 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:45:41.648 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:45:41.819 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:45:41.841 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 186.3411ms
+2022-08-16 22:45:41.851 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:45:41.856 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 450.4716ms
+2022-08-16 22:50:31.456 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:50:31.842 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:50:31.843 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:50:31.847 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:50:31.847 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:50:31.848 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:50:32.316 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:50:32.927 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 617.7559ms
+2022-08-16 22:50:33.034 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:50:33.050 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 16.0790ms
+2022-08-16 22:50:33.564 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:50:33.745 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 180.8064ms
+2022-08-16 22:50:34.343 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:50:34.582 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.3229ms
+2022-08-16 22:50:38.926 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:50:39.257 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:50:39.266 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:50:39.422 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:50:39.430 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 148.6306ms
+2022-08-16 22:50:39.566 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:50:39.579 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 0 text/plain;+charset=utf-8 652.2472ms
+2022-08-16 22:51:52.328 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:51:52.649 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:51:52.652 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:51:52.654 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:51:52.656 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:51:52.657 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:51:53.238 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:51:53.463 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 227.1802ms
+2022-08-16 22:51:53.514 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:51:53.520 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 5.8078ms
+2022-08-16 22:51:53.702 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:51:53.720 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.8725ms
+2022-08-16 22:51:54.077 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:51:54.278 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 200.7589ms
+2022-08-16 22:51:56.385 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:51:56.625 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:51:56.635 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:52:55.541 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:52:55.552 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 58908.0417ms
+2022-08-16 22:52:55.568 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:52:55.581 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 0 text/plain;+charset=utf-8 59196.1076ms
+2022-08-16 22:53:00.298 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:53:00.301 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:53:00.303 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:55:00.621 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:55:00.860 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:55:00.862 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:55:00.866 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:55:00.870 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:55:00.870 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:55:01.476 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:55:01.722 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 252.8040ms
+2022-08-16 22:55:01.765 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:55:01.773 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 7.7651ms
+2022-08-16 22:55:01.955 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:55:01.983 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.7010ms
+2022-08-16 22:55:02.269 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:55:02.454 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.9584ms
+2022-08-16 22:55:06.593 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:55:06.901 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:55:06.913 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:55:21.346 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:55:21.368 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 14440.5766ms
+2022-08-16 22:55:21.376 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:55:21.379 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 14786.2478ms
+2022-08-16 22:58:23.020 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 22:58:23.303 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 22:58:23.305 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 22:58:23.311 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 22:58:23.314 -05:00 [INF] Hosting environment: Development
+2022-08-16 22:58:23.315 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 22:58:24.031 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 22:58:24.256 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 233.6243ms
+2022-08-16 22:58:24.314 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 22:58:24.321 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 6.7863ms
+2022-08-16 22:58:24.478 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 22:58:24.509 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.6086ms
+2022-08-16 22:58:24.790 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 22:58:25.009 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.7707ms
+2022-08-16 22:58:26.324 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 22:58:26.584 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:58:26.597 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 22:58:26.734 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 22:58:26.753 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 150.4865ms
+2022-08-16 22:58:26.758 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 22:58:26.759 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 435.0342ms
+2022-08-16 23:00:36.927 -05:00 [INF] User profile is available. Using 'C:\Users\SEBASTIAN ROMERO\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 23:00:37.240 -05:00 [INF] Now listening on: https://localhost:7028
+2022-08-16 23:00:37.241 -05:00 [INF] Now listening on: http://localhost:5028
+2022-08-16 23:00:37.248 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 23:00:37.252 -05:00 [INF] Hosting environment: Development
+2022-08-16 23:00:37.255 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Services
+2022-08-16 23:00:38.076 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2022-08-16 23:00:38.334 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 261.3932ms
+2022-08-16 23:00:38.384 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 23:00:38.389 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 5.4631ms
+2022-08-16 23:00:38.519 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2022-08-16 23:00:38.615 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.3870ms
+2022-08-16 23:00:38.770 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2022-08-16 23:00:38.984 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 214.3347ms
+2022-08-16 23:00:40.066 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:7028/api/EDI - -
+2022-08-16 23:00:40.340 -05:00 [INF] Executing endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 23:00:40.350 -05:00 [INF] Route matched with {action = "Get", controller = "EDI"}. Executing controller action with signature System.String Get() on controller EDI.Services.Controllers.EDIController (EDI.Services).
+2022-08-16 23:00:40.486 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-08-16 23:00:40.505 -05:00 [INF] Executed action EDI.Services.Controllers.EDIController.Get (EDI.Services) in 145.8679ms
+2022-08-16 23:00:40.510 -05:00 [INF] Executed endpoint 'EDI.Services.Controllers.EDIController.Get (EDI.Services)'
+2022-08-16 23:00:40.512 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:7028/api/EDI - - - 200 - text/plain;+charset=utf-8 445.6197ms
