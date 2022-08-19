@@ -12,8 +12,8 @@ namespace EDI.DataAccess.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseCosmos(
-                "https://advent-final.documents.azure.com:443/",
-                "lLsQ9bUFgvY6bb015YWKDHTLYYxsZZkw0PKDrYOeEAnFJ7Fp1mYl3NUrssQZayRkHx9YxRbEysDrkp1PRzVYxw==",
+                "https://b3e0bfa5-0ee0-4-231-b9ee.documents.azure.com:443/",
+                "wwkz0XbBDa4FgWayuFw4rNGDVwm3phIVde0QyBvcDsPezpZNTbrkZ82hUntH3IzMu40x1kt56ZWLRQj2m6DWdg==",
                 "advent-final"
             );
         }
@@ -21,7 +21,7 @@ namespace EDI.DataAccess.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ItemContainer>()
-                .ToContainer("Containers")
+                .ToContainer("Item")
                 .HasOne(item => item.ContainerId);
         }
     }

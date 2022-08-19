@@ -1,7 +1,6 @@
 ﻿using EDI.Contracts.Repository;
 using EDI.Core.V1;
 using EDI.Entities.Entities;
-using EDI.Entities.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +32,7 @@ namespace EDI.Services.Controllers
         // GET api/<EDIController>/5
         [HttpGet("{id}")]
         [ActionName("GetContainer")]
-        public async Task<ActionResult<List<ItemContainer>>> GetAll(string id)
+        public async Task<ActionResult<List<ItemContainer>>> GetById(string id)
         {
             var response = await _ediCore.GetContainerById(id);
             return StatusCode((int)response.StatusHttp, response);
@@ -41,9 +40,10 @@ namespace EDI.Services.Controllers
 
         // POST api/<EDIController>
         [HttpPost]
-        public async Task<ActionResult<Task<ResponseService<Tuple<string, bool>>>>> Post([FromBody] string edi)
+        [ActionName("PostContainer")]
+        public async Task<ActionResult<Tuple<List<ItemContainer>, bool>>> Post()
         {
-            var response = await _ediCore.PostContainers(edi);
+            var response = await _ediCore.PostContainers();
             return StatusCode((int)response.StatusHttp, response);
         }
 

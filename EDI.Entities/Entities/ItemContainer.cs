@@ -4,7 +4,7 @@ namespace EDI.Entities.Entities
 {
     public class ItemContainer
     {
-        [JsonProperty(PropertyName = "ContainerId")]
+        [JsonProperty(PropertyName = "id")]
         public string ContainerId { get; set; }
 
         [JsonProperty(PropertyName = "Origin")]

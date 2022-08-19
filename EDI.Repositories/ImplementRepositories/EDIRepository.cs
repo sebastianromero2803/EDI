@@ -31,7 +31,7 @@ namespace EDI.Repositories.ImplementRepositories
         {
             try
             {
-                var query = _context.GetItemQueryIterator<ItemContainer>(new QueryDefinition("SELECT * FROM c"));
+                var query = _context.GetItemQueryIterator<ItemContainer>(new QueryDefinition("SELECT * FROM Item"));
                 List<ItemContainer> results = new List<ItemContainer>();
                 while (query.HasMoreResults)
                 {

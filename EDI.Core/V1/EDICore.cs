@@ -47,25 +47,26 @@ namespace EDI.Core.V1
             }
         }
 
-        public async Task<ResponseService<Tuple<string, bool>>> PostContainers(string EDIFile)
+        public async Task<ResponseService<Tuple<List<ItemContainer>, bool>>> PostContainers()
         {
             try
             {
-                Tuple<string, List<ItemContainer>> ediProcessed = ProcessEDIToJson(EDIFile);
-                foreach (var container in ediProcessed.Item2)
+                List<ItemContainer> ediProcessed = ProcessEDIToJson(@"C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Entities\x12.315.edi");
+                foreach (var container in ediProcessed)
                 {
+                    var containerJson = Newtonsoft.Json.JsonConvert.SerializeObject(container);
                     await _ediContext.AddAsync(container);
                 }
-                return new ResponseService<Tuple<string, bool>>(false, ediProcessed.Item2.Count >= 1 ? "Container Added" : "Containers Added", HttpStatusCode.OK, Tuple.Create(ediProcessed.Item1, true));
+                return new ResponseService<Tuple<List<ItemContainer>, bool>>(false, ediProcessed.Count >= 1 ? "Container Added" : "Containers Added", HttpStatusCode.OK, Tuple.Create(ediProcessed, true));
             }
             catch (Exception ex)
             {
-                return _errorHandler.Error(ex, "PostContainers", Tuple.Create("", true));
+                return _errorHandler.Error(ex, "PostContainers", Tuple.Create(new List<ItemContainer>(), false));
             }
             
         }
 
-        public Tuple<string, List<ItemContainer>> ProcessEDIToJson(string inputEDIFilename) 
+        public List<ItemContainer> ProcessEDIToJson(string inputEDIFilename) 
         {
             var grammar = EdiGrammar.NewX12();
             grammar.SetAdvice(
@@ -83,8 +84,7 @@ namespace EDI.Core.V1
             {
                 po315 = new EdiSerializer().Deserialize<X12_315>(stream, grammar);
                 List<ItemContainer> containers = mapToContainers(po315);
-                var po315Json = Newtonsoft.Json.JsonConvert.SerializeObject(containers);
-                return Tuple.Create(po315Json, containers);
+                return containers;
             }
         }
 
@@ -115,6 +115,10 @@ namespace EDI.Core.V1
                             {
                                 container.Origin = port.LocationIdentifier;
                                 container.Description = port.PortName;
+                            }
+                            if (port.PortOrTerminalFunctionCode == "M")
+                            {
+                                container.Destination = port.LocationIdentifier;
                             }
                         }
                         containers.Add(container);
