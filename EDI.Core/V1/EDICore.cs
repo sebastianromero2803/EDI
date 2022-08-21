@@ -51,7 +51,7 @@ namespace EDI.Core.V1
         {
             try
             {
-                List<ItemContainer> ediProcessed = ProcessEDIToJson(@"C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Entities\x12.315.edi");
+                List<ItemContainer> ediProcessed = ProcessEDI(@"C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\EDI\EDI.Entities\x12.315.edi");
                 foreach (var container in ediProcessed)
                 {
                     var containerJson = Newtonsoft.Json.JsonConvert.SerializeObject(container);
@@ -66,7 +66,7 @@ namespace EDI.Core.V1
             
         }
 
-        public List<ItemContainer> ProcessEDIToJson(string inputEDIFilename) 
+        public List<ItemContainer> ProcessEDI(string inputEDIFilename) 
         {
             var grammar = EdiGrammar.NewX12();
             grammar.SetAdvice(
@@ -102,11 +102,11 @@ namespace EDI.Core.V1
                             ContainerId = info.ReferenceIdentification,
                             Origin = null,
                             Destination = null,
-                            Status = true,
+                            Status = null,
                             Description = null,
                             Dimensions = "20x10x5",
                             Book = true,
-                            IssuedBy = info.ReferenceIdentificationQualifier,
+                            IssuedBy = group.ApplicationSenderCode,
                             Fee = 12500
                         };
                         foreach (var port in order.PortsOrTerminal)
@@ -115,11 +115,19 @@ namespace EDI.Core.V1
                             {
                                 container.Origin = port.LocationIdentifier;
                                 container.Description = port.PortName;
+                                container.Status = "IN YARD";
                             }
-                            if (port.PortOrTerminalFunctionCode == "M")
+                            else if (port.PortOrTerminalFunctionCode == "O")
+                                container.Status = "IN YARD";
+                            else if (port.PortOrTerminalFunctionCode == "M" || port.PortOrTerminalFunctionCode == "1")
                             {
                                 container.Destination = port.LocationIdentifier;
+                                container.Status = "UNLOAD FROM VESSEL";
                             }
+                            else if (port.PortOrTerminalFunctionCode == "R")
+                                container.Status = "UNLOAD FROM VESSEL";
+                            else if (port.PortOrTerminalFunctionCode == "T" || port.PortOrTerminalFunctionCode == "Y")
+                                container.Status = "GATE OUT";
                         }
                         containers.Add(container);
                     }

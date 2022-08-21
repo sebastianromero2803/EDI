@@ -14,7 +14,7 @@ namespace EDI.Entities.Entities
         public string Destination { get; set; }
 
         [JsonProperty(PropertyName = "Status")]
-        public bool Status { get; set; }
+        public string Status { get; set; }
 
         [JsonProperty(PropertyName = "Description")]
         public string Description { get; set; }
